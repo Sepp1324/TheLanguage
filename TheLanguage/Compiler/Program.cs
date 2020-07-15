@@ -1,24 +1,34 @@
-﻿using Compiler.Base;
+﻿using Compiler.Parsing;
+using Compiler.Scanning;
 using System.Collections.Generic;
 
 namespace Compiler
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            string input = "1 + 1";
+            string input = "1 + 2 + 3";
 
-            var definitions = new List<TokenDefinition>()
+            var tokenDefinitions = new List<TokenDefinition>()
             {
                 new TokenDefinition("Integer", "[0-9]+"),
                 new TokenDefinition("Space", " ", true),
                 new TokenDefinition("Plus", "[+]")
             };
 
-            var tokenizer = new Tokenizer(definitions);
+            var syntaxNodeDefinitions = new List<SyntaxNodeDefinition>()
+            {
+                new SyntaxNodeDefinition("Addition", "Integer", "Plus", "Integer")
+            };
 
-            var result = tokenizer.Parse(input);
+            var tokenizer = new Tokenizer(tokenDefinitions);
+
+            var tokenResult = tokenizer.Parse(input);
+
+            var parser = new Parser(syntaxNodeDefinitions);
+
+            var syntaxTree = parser.Parse(tokenResult);
         }
     }
 }
