@@ -1,10 +1,16 @@
-﻿namespace Compiler
+﻿using Compiler.Base;
+
+namespace Compiler
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // 1 + 1
+            string input = "1 + 1";
+
+            TokenDefinition integerDefinition = new TokenDefinition("Integer", "[0-9]+");
+            TokenDefinition spaceDefinition = new TokenDefinition("Space", " ");
+            TokenDefinition plusDefinition = new TokenDefinition("Plus", "+");
         }
     }
 }
