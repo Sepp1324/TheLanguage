@@ -9,5 +9,7 @@
         public int Length { get; set; }
 
         public string Value { get; set; }
+
+        public TokenDefinition Definition { get; set; }
     }
 }
