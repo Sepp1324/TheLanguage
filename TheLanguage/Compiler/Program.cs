@@ -17,16 +17,11 @@ namespace Compiler
                 new TokenDefinition("Plus", "[+]")
             };
 
-            var syntaxNodeDefinitions = new List<SyntaxNodeDefinition>()
-            {
-                new SyntaxNodeDefinition("Addition", "Integer", "Plus", "Integer")
-            };
-
             var tokenizer = new Tokenizer(tokenDefinitions);
 
             var tokenResult = tokenizer.Parse(input);
 
-            var parser = new Parser(syntaxNodeDefinitions);
+            var parser = new Parser();
 
             var syntaxTree = parser.Parse(tokenResult);
         }
