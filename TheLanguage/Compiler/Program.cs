@@ -1,4 +1,5 @@
 ﻿using Compiler.Base;
+using System.Collections.Generic;
 
 namespace Compiler
 {
@@ -8,9 +9,16 @@ namespace Compiler
         {
             string input = "1 + 1";
 
-            TokenDefinition integerDefinition = new TokenDefinition("Integer", "[0-9]+");
-            TokenDefinition spaceDefinition = new TokenDefinition("Space", " ");
-            TokenDefinition plusDefinition = new TokenDefinition("Plus", "+");
+            var definitions = new List<TokenDefinition>()
+            {
+                new TokenDefinition("Integer", "[0-9]+"),
+                new TokenDefinition("Space", " ", true),
+                new TokenDefinition("Plus", "[+]")
+            };
+
+            var tokenizer = new Tokenizer(definitions);
+
+            var result = tokenizer.Parse(input);
         }
     }
 }

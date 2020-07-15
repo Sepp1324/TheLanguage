@@ -22,5 +22,7 @@ namespace Compiler.Base
             Length = result.Length;
             Definition = definition;
         }
+
+        public override string ToString() => $"{Name} [{Value}]";
     }
 }

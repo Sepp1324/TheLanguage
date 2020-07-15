@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{6F7ED484-C44F-4EA5-8C13-5A4E01BECCDD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler", "Compiler\Compiler.csproj", "{9D7997B9-8986-4B50-9CCC-0B65AA649DBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compiler", "Compiler\Compiler.csproj", "{9D7997B9-8986-4B50-9CCC-0B65AA649DBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6F7ED484-C44F-4EA5-8C13-5A4E01BECCDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F7ED484-C44F-4EA5-8C13-5A4E01BECCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F7ED484-C44F-4EA5-8C13-5A4E01BECCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F7ED484-C44F-4EA5-8C13-5A4E01BECCDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D7997B9-8986-4B50-9CCC-0B65AA649DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D7997B9-8986-4B50-9CCC-0B65AA649DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D7997B9-8986-4B50-9CCC-0B65AA649DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
